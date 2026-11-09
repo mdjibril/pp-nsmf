@@ -1,0 +1,7 @@
+#fields	ts	uid	id.orig_p	id.resp_p	trans_depth	method	version	user_agent	origin	request_body_len	response_body_len	status_code	status_msg	info_code	info_msg	tags	username	password	proxied	orig_fuids	orig_filenames	orig_mime_types	resp_fuids	resp_filenames	resp_mime_types
+#types	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string
+1792615592.066739	C4V6yNmnyb2ZltJb8	45438	8080	1	GET	1.1	-	-	0	12	401	Unauthorized	-	-	(empty)	testuser	-	-	-	-	-	FAnxms28VFjtA5R4Q1	-	text/plain
+1792615593.133452	Cf0WBy2aTRkEMHgMq9	45450	8080	1	GET	1.1	-	-	0	12	401	Unauthorized	-	-	(empty)	testuser	-	-	-	-	-	FS82kU3jpNLdalMJNe	-	text/plain
+1792615594.211646	CaWDhp2GwQFxdtaBQd	45466	8080	1	GET	1.1	-	-	0	12	401	Unauthorized	-	-	(empty)	testuser	-	-	-	-	-	FVyfB5TyMCamQnKS	-	text/plain
+1792615595.293122	CzXY5V1LhWbjgJxGHi	45470	8080	1	GET	1.1	-	-	0	12	401	Unauthorized	-	-	(empty)	testuser	-	-	-	-	-	FCDvum3YSisEPcDXv1	-	text/plain
+1792615596.377542	CZz2v21ZpV9TnGGMz3	45472	8080	1	GET	1.1	-	-	0	12	401	Unauthorized	-	-	(empty)	testuser	-	-	-	-	-	FxxHWo29ZcUcNuibub	-	text/plain

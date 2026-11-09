@@ -1,0 +1,3 @@
+#fields	ts	uid	id.orig_p	id.resp_p	proto	service	duration	orig_bytes	resp_bytes	conn_state	local_orig	local_resp	missed_bytes	history	orig_pkts	orig_ip_bytes	resp_pkts	resp_ip_bytes	tunnel_parents	ip_proto
+#types	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string
+1792617515.745555	CWMHoA48UXE2seOrBd	39577	9999	tcp	-	0.009156	65536	0	SF	T	T	0	ShADaFf	49	68092	41	2140	-	6

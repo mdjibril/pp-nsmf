@@ -1,0 +1,4 @@
+{"window_start_utc":"2026-10-21T00:25:00+00:00","window_seconds":60,"source_log":"suricata_dns","event_count":2,"query_types":{"A":2},"response_codes":{"NOERROR":1},"dns_message_types":{"query":1,"answer":1},"answer_count":1}
+{"window_start_utc":"2026-10-21T00:26:00+00:00","window_seconds":60,"source_log":"suricata_dns","event_count":2,"query_types":{"A":2},"response_codes":{"NOERROR":1},"dns_message_types":{"query":1,"answer":1},"answer_count":1}
+{"window_start_utc":"2026-10-21T00:39:00+00:00","window_seconds":60,"source_log":"suricata_dns","event_count":2,"query_types":{"A":2},"response_codes":{"NOERROR":1},"dns_message_types":{"query":1,"answer":1},"answer_count":1}
+{"window_start_utc":"2026-10-21T00:41:00+00:00","window_seconds":60,"source_log":"suricata_dns","event_count":2,"query_types":{"A":2},"response_codes":{"NOERROR":1},"dns_message_types":{"query":1,"answer":1},"answer_count":1}

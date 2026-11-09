@@ -1,0 +1,5 @@
+10/21/2026-20:45:47.822262  [**] [1:1000001:1] PP-NSMF auth failure (HTTP 401) [**] [Classification: Unsuccessful User Privilege Gain] [Priority: 1] {TCP} 10.10.10.20:8080 -> 10.10.10.30:56334
+10/21/2026-20:45:48.897042  [**] [1:1000001:1] PP-NSMF auth failure (HTTP 401) [**] [Classification: Unsuccessful User Privilege Gain] [Priority: 1] {TCP} 10.10.10.20:8080 -> 10.10.10.30:56346
+10/21/2026-20:45:49.974606  [**] [1:1000001:1] PP-NSMF auth failure (HTTP 401) [**] [Classification: Unsuccessful User Privilege Gain] [Priority: 1] {TCP} 10.10.10.20:8080 -> 10.10.10.30:56352
+10/21/2026-20:45:51.045458  [**] [1:1000001:1] PP-NSMF auth failure (HTTP 401) [**] [Classification: Unsuccessful User Privilege Gain] [Priority: 1] {TCP} 10.10.10.20:8080 -> 10.10.10.30:51598
+10/21/2026-20:45:52.116459  [**] [1:1000001:1] PP-NSMF auth failure (HTTP 401) [**] [Classification: Unsuccessful User Privilege Gain] [Priority: 1] {TCP} 10.10.10.20:8080 -> 10.10.10.30:51614

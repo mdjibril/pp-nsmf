@@ -1,0 +1,14 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	files
+#open	2026-10-21-20-46-51
+#fields	ts	fuid	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	source	depth	analyzers	mime_type	filename	duration	local_orig	is_orig	seen_bytes	total_bytes	missing_bytes	overflow_bytes	timedout	parent_fuid	md5	sha1	sha256	extracted	extracted_cutoff	extracted_size
+#types	time	string	string	addr	port	addr	port	string	count	set[string]	string	string	interval	bool	bool	count	count	count	count	bool	string	string	string	string	string	bool	count
+1792615611.401384	Fr7wrI5ZTnFyMGUjf	ChB1582hqGDKXLKj18	10.10.10.30	38784	10.10.10.20	8080	HTTP	0	(empty)	text/plain	-	0.000000	T	F	12	12	0	0	F	-	-	-	-	-	-	-
+1792615612.473210	FWsXgSSoe8soG6Jz1	CXTshB1eVKl3kE14d	10.10.10.30	38798	10.10.10.20	8080	HTTP	0	(empty)	text/plain	-	0.000000	T	F	12	12	0	0	F	-	-	-	-	-	-	-
+1792615613.628824	FRe3Sm10d2qNKb1WI1	CDKXCf2JQKuoP70pz5	10.10.10.30	38802	10.10.10.20	8080	HTTP	0	(empty)	text/plain	-	0.000000	T	F	12	12	0	0	F	-	-	-	-	-	-	-
+1792615614.697118	FiDcZ32nxR541uKQBa	CIk4At4XeOavuGogka	10.10.10.30	38810	10.10.10.20	8080	HTTP	0	(empty)	text/plain	-	0.000000	T	F	12	12	0	0	F	-	-	-	-	-	-	-
+1792615615.760880	FmSjgy4tagVZ6ZFr64	CEC7k13PuN3ahT7LS1	10.10.10.30	38818	10.10.10.20	8080	HTTP	0	(empty)	text/plain	-	0.000000	T	F	12	12	0	0	F	-	-	-	-	-	-	-
+#close	2026-10-21-20-46-57

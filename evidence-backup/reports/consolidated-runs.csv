@@ -1,0 +1,30 @@
+scenario,run_id,transformation_version,validator_version,hmac_key_id,c0_records,c1_records,c2_records,c3_windows,c0_bytes,c1_bytes,c2_bytes,c3_bytes,c2_reduction_pct,c3_reduction_pct,observed_zeek_events,observed_suricata_events,scenario_observed,http_requests,dns_queries,scan_connections,auth_401,beacon_connections,bulk_connections,bulk_orig_bytes,alerts,suricata_flow_events,suricata_http_events,suricata_dns_events,validation_status,documented_deviation
+S1,S1-R1,2.0.0,1.1.0,e04d6b0475fd,17,17,5,1,36544,23888,1065,180,97.09,99.51,5,5,"5x GET->200, 5 http req, 5 http events",5,,,,,,,,,5,,PASS,
+S1,S1-R2,2.0.0,1.1.0,e04d6b0475fd,17,17,5,1,36552,23894,1065,180,97.09,99.51,5,5,"5x GET->200, 5 http req, 5 http events",5,,,,,,,,,5,,PASS,
+S1,S1-R3,2.0.0,1.1.0,e04d6b0475fd,17,17,5,1,36390,23887,1065,180,97.07,99.51,5,5,"5x GET->200, 5 http req, 5 http events",5,,,,,,,,,5,,PASS,
+S1,S1-R4,2.0.0,1.1.0,e04d6b0475fd,17,17,5,1,36558,23891,1065,180,97.09,99.51,5,5,"5x GET->200, 5 http req, 5 http events",5,,,,,,,,,5,,PASS,
+S1,S1-R5,2.0.0,1.1.0,e04d6b0475fd,17,17,5,1,36149,23885,1065,180,97.05,99.5,5,5,"5x GET->200, 5 http req, 5 http events",5,,,,,,,,,5,,PASS,
+S2,S2-R2,2.0.0,1.1.0,e04d6b0475fd,17,17,12,1,31949,22271,3144,236,90.16,99.26,6,12,"6 queries, 12 dns events",,6,,,,,,,,,12,PASS,
+S2,S2-R3,2.0.0,1.1.0,e04d6b0475fd,18,18,12,1,33107,22727,3144,236,90.5,99.29,6,12,"6 queries, 12 dns events",,6,,,,,,,,,12,PASS,one extra non-DNS Suricata source event (18 vs 17)
+S2,S2-R4,2.0.0,1.1.0,e04d6b0475fd,17,17,12,1,31720,22276,3144,236,90.09,99.26,6,12,"6 queries, 12 dns events",,6,,,,,,,,,12,PASS,
+S2,S2-R5,2.0.0,1.1.0,e04d6b0475fd,17,17,12,1,31958,22279,3144,236,90.16,99.26,6,12,"6 queries, 12 dns events",,6,,,,,,,,,12,PASS,
+S3,S3-R1,2.1.0,1.1.0,e04d6b0475fd,7,7,5,1,27399,18598,878,194,96.8,99.29,5,5,"5 scan conn, 5 flow",,,5,,,,,0,5,,,PASS,
+S3,S3-R2,2.1.0,1.1.0,e04d6b0475fd,7,7,5,1,27862,18594,878,194,96.85,99.3,5,5,"5 scan conn, 5 flow",,,5,,,,,0,5,,,PASS,
+S3,S3-R3,2.1.0,1.1.0,e04d6b0475fd,7,7,5,1,27861,18593,878,194,96.85,99.3,5,5,"5 scan conn, 5 flow",,,5,,,,,0,5,,,PASS,
+S3,S3-R4,2.1.0,1.1.0,e04d6b0475fd,7,7,5,1,27630,18596,878,194,96.82,99.3,5,5,"5 scan conn, 5 flow",,,5,,,,,0,5,,,PASS,
+S3,S3-R5,2.1.0,1.1.0,e04d6b0475fd,7,7,5,1,27941,18594,878,194,96.86,99.31,5,5,"5 scan conn, 5 flow",,,5,,,,,0,5,,,PASS,
+S4,S4-R1,2.2.0,1.1.0,e04d6b0475fd,22,22,15,1,42494,28580,3405,313,91.99,99.26,5,5,"5x 401, 5 alerts (sid 1000001)",,,,5,,,,5,,,,PASS,
+S4,S4-R2,2.2.0,1.1.0,e04d6b0475fd,22,22,15,1,42012,28327,3405,313,91.9,99.25,5,5,"5x 401, 5 alerts (sid 1000001)",,,,5,,,,5,,,,PASS,
+S4,S4-R3,2.2.0,1.1.0,e04d6b0475fd,22,22,15,1,42131,28453,3405,313,91.92,99.26,5,5,"5x 401, 5 alerts (sid 1000001)",,,,5,,,,5,,,,PASS,
+S4,S4-R4,2.2.0,1.1.0,e04d6b0475fd,22,22,15,1,42488,28572,3405,313,91.99,99.26,5,5,"5x 401, 5 alerts (sid 1000001)",,,,5,,,,5,,,,PASS,
+S4,S4-R5,2.2.0,1.1.0,e04d6b0475fd,22,22,15,1,42510,28593,3405,313,91.99,99.26,5,5,"5x 401, 5 alerts (sid 1000001)",,,,5,,,,5,,,,PASS,
+S5,S5-R1,2.2.0,1.1.0,e04d6b0475fd,7,7,4,1,37746,25796,700,157,98.15,99.58,4,4,"4 beacon conn, 4 flow",,,,,4,,,0,4,,,PASS,one extra Suricata stats event (3 vs 2)
+S5,S5-R2,2.2.0,1.1.0,e04d6b0475fd,6,6,4,1,27102,18001,700,157,97.42,99.42,4,4,"4 beacon conn, 4 flow",,,,,4,,,0,4,,,PASS,
+S5,S5-R3,2.2.0,1.1.0,e04d6b0475fd,6,6,4,1,26868,18000,700,157,97.39,99.42,4,4,"4 beacon conn, 4 flow",,,,,4,,,0,4,,,PASS,
+S5,S5-R4,2.2.0,1.1.0,e04d6b0475fd,6,6,4,1,27099,17999,700,157,97.42,99.42,4,4,"4 beacon conn, 4 flow",,,,,4,,,0,4,,,PASS,
+S5,S5-R5,2.2.0,1.1.0,e04d6b0475fd,6,6,4,1,26865,17999,700,157,97.39,99.42,4,4,"4 beacon conn, 4 flow",,,,,4,,,0,4,,,PASS,
+S6,S6-R1,2.2.0,1.1.0,e04d6b0475fd,2,2,1,1,14212,8420,177,159,98.75,98.88,1,1,"1 bulk conn, 65536 orig_bytes, 1 flow",,,,,,1,65536,0,1,,,PASS,
+S6,S6-R2,2.2.0,1.1.0,e04d6b0475fd,2,2,1,1,14447,8420,177,159,98.77,98.9,1,1,"1 bulk conn, 65536 orig_bytes, 1 flow",,,,,,1,65536,0,1,,,PASS,
+S6,S6-R3,2.2.0,1.1.0,e04d6b0475fd,2,2,1,1,14448,8421,177,159,98.77,98.9,1,1,"1 bulk conn, 65536 orig_bytes, 1 flow",,,,,,1,65536,0,1,,,PASS,
+S6,S6-R4,2.2.0,1.1.0,e04d6b0475fd,3,3,1,1,25414,16220,177,159,99.3,99.37,1,1,"1 bulk conn, 65536 orig_bytes, 1 flow",,,,,,1,65536,0,1,,,PASS,one extra Suricata stats event (3 vs 2); bytes_toserver 68844 vs 68778
+S6,S6-R5,2.2.0,1.1.0,e04d6b0475fd,3,3,1,1,24945,16221,177,159,99.29,99.36,1,1,"1 bulk conn, 65536 orig_bytes, 1 flow",,,,,,1,65536,0,1,,,PASS,one extra Suricata stats event (3 vs 2)

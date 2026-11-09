@@ -1,0 +1,14 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	http
+#open	2026-10-21-19-36-24
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	trans_depth	method	host	uri	referrer	version	user_agent	origin	request_body_len	response_body_len	status_code	status_msg	info_code	info_msg	tags	username	password	proxied	orig_fuids	orig_filenames	orig_mime_types	resp_fuids	resp_filenames	resp_mime_types
+#types	time	string	addr	port	addr	port	count	string	string	string	string	string	string	string	count	count	count	string	count	string	set[enum]	string	string	set[string]	vector[string]	vector[string]	vector[string]	vector[string]	vector[string]	vector[string]
+1792611384.666581	C1sFYoM5ILu8LmkFk	10.10.10.10	59500	10.10.10.20	80	1	GET	10.10.10.20:80	/	-	1.1	Wget	-	0	136	200	OK	-	-	(empty)	-	-	-	-	-	-	FwLsgq4ya2lwuDocWl	-	text/html
+1792611386.305891	CV7Iq5277ijXbh8FU2	10.10.10.10	59508	10.10.10.20	80	1	GET	10.10.10.20:80	/	-	1.1	Wget	-	0	136	200	OK	-	-	(empty)	-	-	-	-	-	-	FnSAd72DOvQqztkzS	-	text/html
+1792611387.451973	C6ENSY2rHmQUZbKHve	10.10.10.10	59512	10.10.10.20	80	1	GET	10.10.10.20:80	/	-	1.1	Wget	-	0	136	200	OK	-	-	(empty)	-	-	-	-	-	-	Frx61y2XtGjVdXM3be	-	text/html
+1792611388.584182	CZd4xK12vAXQQ69O73	10.10.10.10	59528	10.10.10.20	80	1	GET	10.10.10.20:80	/	-	1.1	Wget	-	0	136	200	OK	-	-	(empty)	-	-	-	-	-	-	F5Q9wI2fETBCx2VY1l	-	text/html
+1792611389.702826	CXJmgi1m2apbrsEDX2	10.10.10.10	38614	10.10.10.20	80	1	GET	10.10.10.20:80	/	-	1.1	Wget	-	0	136	200	OK	-	-	(empty)	-	-	-	-	-	-	F2Sz5I325O30c9mmVe	-	text/html
+#close	2026-10-21-19-36-31

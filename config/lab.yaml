@@ -1,0 +1,97 @@
+# PP-NSMF laboratory configuration.
+#
+# This file is the single source of truth for node identities and intended
+# addressing. It intentionally contains no secrets: HMAC keys, passwords, and
+# credentials are stored separately (outside this file and outside source
+# control) and referenced only by non-secret identifiers.
+
+project:
+  name: PP-NSMF
+  project_id: 63f44bbf-fd98-49c1-a510-0678bb500780
+  subnet: 10.10.10.0/24
+  hub: Hub1
+
+# Container names follow the GNS3 convention:
+#   GNS3.<node gns3_name>.<project_id>
+# Scripts resolve the actual running container by this prefix and never rely on
+# a hard-coded container ID, because GNS3 recreates containers on node restart.
+
+dns_responder:
+  address: 10.10.10.40
+  port: 53
+  test_name: probe.pp-nsmf.test
+  expected_answer: 10.10.10.20
+
+nodes:
+  client:
+    gns3_name: POC-CLIENT-1
+    role: traffic-generator
+    image: alpine:latest
+    interface: eth0
+    ip: 10.10.10.10
+    prefix: 24
+    # GNS3-injected busybox provides ip/ifconfig; system busybox also present.
+    ip_tool: ip
+
+  server:
+    gns3_name: POC-SERVER-1
+    role: target
+    image: alpine:latest
+    interface: eth0
+    ip: 10.10.10.20
+    prefix: 24
+    ip_tool: ip
+
+  attacker:
+    gns3_name: Attacker-1
+    role: security-test-traffic
+    image: ubuntu:24.04
+    interface: eth0
+    ip: 10.10.10.30
+    prefix: 24
+    # Minimal ubuntu image has no iproute2 on PATH; use GNS3 busybox.
+    ip_tool: /gns3/bin/busybox ip
+
+  zeek:
+    gns3_name: MONITOR-ZEEK-1
+    role: zeek-monitor
+    image: pp-nsmf-zeek:9.0.0
+    interface: eth0
+    ip: 10.10.10.40
+    prefix: 24
+    ip_tool: ip
+
+  suricata:
+    gns3_name: MONITOR-SURI-1
+    role: suricata-monitor
+    image: pp-nsmf-suri:7.0.3
+    interface: eth0
+    # Passive monitor: no IPv4 address is assigned.
+    ip: null
+    prefix: null
+    passive: true
+    ip_tool: ip
+
+# Connectivity checks performed by verify_topology.py.
+connectivity:
+  source: client
+  ping_targets:
+    - server
+    - attacker
+    - zeek
+
+# Monitoring processes verified by verify_topology.py.
+monitoring:
+  zeek:
+    node: zeek
+    match: "zeek -i eth0"
+    # Zeek is started/stopped per run by the controller.
+    required_running: false
+  dns_responder:
+    node: zeek
+    match: "dns_responder.py"
+  suricata:
+    node: suricata
+    match: "suricata"
+    # Suricata is started/stopped per run by the controller.
+    required_running: false

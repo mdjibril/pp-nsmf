@@ -1,0 +1,7 @@
+#fields	ts	uid	id.orig_p	id.resp_p	trans_depth	method	version	user_agent	origin	request_body_len	response_body_len	status_code	status_msg	info_code	info_msg	tags	username	password	proxied	orig_fuids	orig_filenames	orig_mime_types	resp_fuids	resp_filenames	resp_mime_types
+#types	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string
+1792611445.152495	CNIjo82BlZDYEE73B4	53204	80	1	GET	1.1	Wget	-	0	136	200	OK	-	-	(empty)	-	-	-	-	-	-	FgJ5yYAK28SXRfiX1	-	text/html
+1792611446.404273	CBV8Io4AtBdg0LykVi	53214	80	1	GET	1.1	Wget	-	0	136	200	OK	-	-	(empty)	-	-	-	-	-	-	Ffv6fi4dDturee0dlk	-	text/html
+1792611447.645717	CrRZAA4F9SkubXl9l3	53224	80	1	GET	1.1	Wget	-	0	136	200	OK	-	-	(empty)	-	-	-	-	-	-	FnWPIZ32hWyIZCXaEl	-	text/html
+1792611448.929401	CQFyWF3KVvvFUDWVc2	53226	80	1	GET	1.1	Wget	-	0	136	200	OK	-	-	(empty)	-	-	-	-	-	-	FUyeU336gAEI3Mg1g8	-	text/html
+1792611450.116177	CYCn3S1JMPud3UHOe6	44956	80	1	GET	1.1	Wget	-	0	136	200	OK	-	-	(empty)	-	-	-	-	-	-	FdR71c3AKCjbHnPbda	-	text/html

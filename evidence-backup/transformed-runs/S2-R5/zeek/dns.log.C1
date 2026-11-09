@@ -1,0 +1,8 @@
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	trans_id	rtt	query	qclass	qclass_name	qtype	qtype_name	rcode	rcode_name	AA	TC	RD	RA	Z	answers	TTLs	rejected	opcode	opcode_name
+#types	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string
+1792605311.314456	CidWCa4RRYdNRjkeCf	h_81744ed11a3819ca	36181	h_0f2034ac6845016b	53	udp	51200	0.000088	h_85e654c93ce54e1d	1	C_INTERNET	1	A	0	NOERROR	F	F	T	T	2	h_3dfe1d2d42524ea4	60.000000	F	0	query
+1792605311.314645	CidWCa4RRYdNRjkeCf	h_81744ed11a3819ca	36181	h_0f2034ac6845016b	53	udp	51201	0.000083	h_85e654c93ce54e1d	1	C_INTERNET	28	AAAA	0	NOERROR	F	F	T	T	2	h_3dfe1d2d42524ea4	60.000000	F	0	query
+1792605313.358455	CjBbIV1P8612JpTd61	h_81744ed11a3819ca	57083	h_0f2034ac6845016b	53	udp	29726	0.000074	h_85e654c93ce54e1d	1	C_INTERNET	1	A	0	NOERROR	F	F	T	T	2	h_3dfe1d2d42524ea4	60.000000	F	0	query
+1792605313.358601	CjBbIV1P8612JpTd61	h_81744ed11a3819ca	57083	h_0f2034ac6845016b	53	udp	29727	0.000041	h_85e654c93ce54e1d	1	C_INTERNET	28	AAAA	0	NOERROR	F	F	T	T	2	h_3dfe1d2d42524ea4	60.000000	F	0	query
+1792605315.419131	C17c5G4w6MBCa4kdja	h_81744ed11a3819ca	60619	h_0f2034ac6845016b	53	udp	24785	0.000076	h_85e654c93ce54e1d	1	C_INTERNET	1	A	0	NOERROR	F	F	T	T	2	h_3dfe1d2d42524ea4	60.000000	F	0	query
+1792605315.419230	C17c5G4w6MBCa4kdja	h_81744ed11a3819ca	60619	h_0f2034ac6845016b	53	udp	24786	0.000068	h_85e654c93ce54e1d	1	C_INTERNET	28	AAAA	0	NOERROR	F	F	T	T	2	h_3dfe1d2d42524ea4	60.000000	F	0	query

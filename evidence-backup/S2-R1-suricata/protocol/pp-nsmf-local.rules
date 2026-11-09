@@ -1,0 +1,1 @@
+alert icmp 10.10.10.0/24 any -> 10.10.10.0/24 any (msg:"PP-NSMF ICMP visibility test"; sid:1000001; rev:1;)

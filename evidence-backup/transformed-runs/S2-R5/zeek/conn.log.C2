@@ -1,0 +1,5 @@
+#fields	ts	uid	id.orig_p	id.resp_p	proto	service	duration	orig_bytes	resp_bytes	conn_state	local_orig	local_resp	missed_bytes	history	orig_pkts	orig_ip_bytes	resp_pkts	resp_ip_bytes	tunnel_parents	ip_proto
+#types	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string
+1792605311.314456	CidWCa4RRYdNRjkeCf	36181	53	udp	dns	0.000272	72	104	SF	T	T	0	Dd	2	128	2	160	-	17
+1792605313.358455	CjBbIV1P8612JpTd61	57083	53	udp	dns	0.000187	72	104	SF	T	T	0	Dd	2	128	2	160	-	17
+1792605315.419131	C17c5G4w6MBCa4kdja	60619	53	udp	dns	0.000167	72	104	SF	T	T	0	Dd	2	128	2	160	-	17

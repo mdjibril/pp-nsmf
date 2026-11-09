@@ -1,0 +1,6 @@
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	service	duration	orig_bytes	resp_bytes	conn_state	local_orig	local_resp	missed_bytes	history	orig_pkts	orig_ip_bytes	resp_pkts	resp_ip_bytes	tunnel_parents	ip_proto
+#types	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string
+1792616885.001928	CQOPnH1XmDBLWNnHQ5	h_dde744c066d4bfc1	43358	h_3dfe1d2d42524ea4	80	tcp	-	0.002894	0	0	SF	T	T	0	ShAFaf	4	216	3	164	-	6
+1792616888.072316	Cjqz4PIX9ZyufBlH2	h_dde744c066d4bfc1	43368	h_3dfe1d2d42524ea4	80	tcp	-	0.001311	0	0	SF	T	T	0	ShAFaf	4	216	3	164	-	6
+1792616891.140536	Cm533z1OvobZmawYhe	h_dde744c066d4bfc1	45214	h_3dfe1d2d42524ea4	80	tcp	-	0.001154	0	0	SF	T	T	0	ShAFaf	4	216	3	164	-	6
+1792616894.185005	CV3e2IeRX09ocTREc	h_dde744c066d4bfc1	45226	h_3dfe1d2d42524ea4	80	tcp	-	0.001229	0	0	SF	T	T	0	ShAFf	4	216	2	112	-	6

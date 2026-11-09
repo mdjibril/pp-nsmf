@@ -1,0 +1,8 @@
+#fields	ts	uid	id.orig_p	id.resp_p	proto	trans_id	rtt	qclass	qclass_name	qtype	qtype_name	rcode	rcode_name	AA	TC	RD	RA	Z	TTLs	rejected	opcode	opcode_name
+#types	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string
+1792605311.314456	CidWCa4RRYdNRjkeCf	36181	53	udp	51200	0.000088	1	C_INTERNET	1	A	0	NOERROR	F	F	T	T	2	60.000000	F	0	query
+1792605311.314645	CidWCa4RRYdNRjkeCf	36181	53	udp	51201	0.000083	1	C_INTERNET	28	AAAA	0	NOERROR	F	F	T	T	2	60.000000	F	0	query
+1792605313.358455	CjBbIV1P8612JpTd61	57083	53	udp	29726	0.000074	1	C_INTERNET	1	A	0	NOERROR	F	F	T	T	2	60.000000	F	0	query
+1792605313.358601	CjBbIV1P8612JpTd61	57083	53	udp	29727	0.000041	1	C_INTERNET	28	AAAA	0	NOERROR	F	F	T	T	2	60.000000	F	0	query
+1792605315.419131	C17c5G4w6MBCa4kdja	60619	53	udp	24785	0.000076	1	C_INTERNET	1	A	0	NOERROR	F	F	T	T	2	60.000000	F	0	query
+1792605315.419230	C17c5G4w6MBCa4kdja	60619	53	udp	24786	0.000068	1	C_INTERNET	28	AAAA	0	NOERROR	F	F	T	T	2	60.000000	F	0	query

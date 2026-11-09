@@ -1,0 +1,15 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	dns
+#open	2026-10-21-17-54-49
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	trans_id	rtt	query	qclass	qclass_name	qtype	qtype_name	rcode	rcode_name	AA	TC	RD	RA	Z	answers	TTLs	rejected	opcode	opcode_name
+#types	time	string	addr	port	addr	port	enum	count	interval	string	count	string	count	string	count	string	bool	bool	bool	bool	count	vector[string]	vector[interval]	bool	count	string
+1792605289.632785	CCsYdJ3rnaUf7wS5Uc	10.10.10.10	51593	10.10.10.40	53	udp	41848	0.000086	probe.pp-nsmf.test	1	C_INTERNET	1	A	0	NOERROR	F	F	T	T	2	10.10.10.20	60.000000	F	0	query
+1792605289.633837	CCsYdJ3rnaUf7wS5Uc	10.10.10.10	51593	10.10.10.40	53	udp	41849	0.000322	probe.pp-nsmf.test	1	C_INTERNET	28	AAAA	0	NOERROR	F	F	T	T	2	10.10.10.20	60.000000	F	0	query
+1792605291.685947	Cn38y33R9DgFKus2j3	10.10.10.10	48277	10.10.10.40	53	udp	29203	0.000073	probe.pp-nsmf.test	1	C_INTERNET	1	A	0	NOERROR	F	F	T	T	2	10.10.10.20	60.000000	F	0	query
+1792605291.686420	Cn38y33R9DgFKus2j3	10.10.10.10	48277	10.10.10.40	53	udp	29204	0.000084	probe.pp-nsmf.test	1	C_INTERNET	28	AAAA	0	NOERROR	F	F	T	T	2	10.10.10.20	60.000000	F	0	query
+1792605293.731860	CmU0o013vFhxhlplp1	10.10.10.10	60835	10.10.10.40	53	udp	9902	0.000071	probe.pp-nsmf.test	1	C_INTERNET	1	A	0	NOERROR	F	F	T	T	2	10.10.10.20	60.000000	F	0	query
+1792605293.731970	CmU0o013vFhxhlplp1	10.10.10.10	60835	10.10.10.40	53	udp	9903	0.000046	probe.pp-nsmf.test	1	C_INTERNET	28	AAAA	0	NOERROR	F	F	T	T	2	10.10.10.20	60.000000	F	0	query
+#close	2026-10-21-17-54-56

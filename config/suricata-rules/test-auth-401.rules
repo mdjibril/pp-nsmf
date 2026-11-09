@@ -1,0 +1,8 @@
+# PP-NSMF S4 test rule: alert on HTTP 401 (Unauthorized) responses.
+#
+# This is a lab-only detection rule used to exercise the Suricata alert path
+# for the S4 authentication-failure scenario. It is not a production rule and
+# does not by itself establish detection effectiveness; that requires labelled
+# ground truth and false-positive/negative measurement.
+
+alert http any any -> any any (msg:"PP-NSMF auth failure (HTTP 401)"; http.stat_code; content:"401"; classtype:unsuccessful-user; sid:1000001; rev:1;)

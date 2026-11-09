@@ -1,0 +1,14 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	conn
+#open	2026-10-21-20-37-23
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	service	duration	orig_bytes	resp_bytes	conn_state	local_orig	local_resp	missed_bytes	history	orig_pkts	orig_ip_bytes	resp_pkts	resp_ip_bytes	tunnel_parents	ip_proto
+#types	time	string	addr	port	addr	port	enum	string	interval	count	count	string	bool	bool	count	string	count	count	count	count	set[string]	count
+1792615038.122425	CqoXC51G1gEEo6qN6e	10.10.10.30	36184	10.10.10.20	8080	tcp	http	0.006025	125	174	SF	T	T	0	ShADadfF	6	445	6	494	-	6
+1792615039.256568	C9G6PR37xHDmwbCZ8l	10.10.10.30	36200	10.10.10.20	8080	tcp	http	0.014921	125	174	SF	T	T	0	ShADadfF	6	445	6	494	-	6
+1792615042.525334	CDOdwN1GHiFFzXdm6g	10.10.10.30	41916	10.10.10.20	8080	tcp	http	0.014040	125	174	SF	T	T	0	ShADadfF	6	445	6	494	-	6
+1792615041.425741	COhJ7F3weAy2mwvFzd	10.10.10.30	41906	10.10.10.20	8080	tcp	http	0.008359	125	174	SF	T	T	0	ShADadfF	6	445	6	494	-	6
+1792615040.327184	CMaZ9m3AEiZ3dXKaNh	10.10.10.30	41896	10.10.10.20	8080	tcp	http	0.007876	125	174	SF	T	T	0	ShADadfF	6	445	6	494	-	6
+#close	2026-10-21-20-37-24

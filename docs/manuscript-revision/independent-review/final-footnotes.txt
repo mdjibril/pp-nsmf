@@ -1,0 +1,13 @@
+[0] 
+[1] 
+[2]  Alissa Cooper et al., Privacy Considerations for Internet Protocols, RFC 6973 (Internet Architecture Board, July 2013), https://www.rfc-editor.org/rfc/rfc6973.
+[3]  Cooper et al., Privacy Considerations for Internet Protocols, sections addressing correlation, surveillance, stored-data compromise, and data minimisation.
+[4]  Nigeria, Nigeria Data Protection Act, 2023 (Abuja: Federal Republic of Nigeria), https://ndpc.gov.ng/download/nigeria-data-protection-act-2023.
+[5]  Niels van Dijkhuizen and Jeroen van der Ham, “A Survey of Network Traffic Anonymisation Techniques and Implementations,” ACM Computing Surveys 51, no. 3 (2018): article 52, https://doi.org/10.1145/3186333.
+[6]  Xiaoqin Pan et al., “Privacy-Preserving Multilayer In-Band Network Telemetry and Data Analytics: For Safety, Please Do Not Report Plaintext Data,” Journal of Lightwave Technology 38, no. 21 (2020): 5855–66, https://doi.org/10.1109/JLT.2020.3005909.
+[7]  Meisam Mohammady et al., “A Multi-view Approach to Preserve Privacy and Utility in Network Trace Anonymization,” ACM Transactions on Privacy and Security 24, no. 3 (2021), https://doi.org/10.1145/3439732.
+[8]  Ugo Fiore and Francesco Palmieri, “A Distance-Based Network Activity Correlation Framework for Defeating Anonymization Overlays,” Information Sciences 690 (2024): 121559, https://doi.org/10.1016/j.ins.2024.121559.
+[9]  Liam Daly Manocchio, Siamak Layeghy, David Gwynne, and Marius Portmann, “A Configurable Anonymisation Approach for Network Flow Data: Balancing Utility and Privacy,” Computers & Electrical Engineering 118, part B (2024): 109465, https://doi.org/10.1016/j.compeleceng.2024.109465.
+[10]  Meisam Mohammady et al., “A Multi-view Approach to Preserve Privacy and Utility in Network Trace Anonymization”; Fiore and Palmieri, “A Distance-Based Network Activity Correlation Framework”; Manocchio et al., “A Configurable Anonymisation Approach.”
+[11]  Cooper et al., Privacy Considerations for Internet Protocols, sections 6–7.
+[12]  Nigeria, Nigeria Data Protection Act, 2023.

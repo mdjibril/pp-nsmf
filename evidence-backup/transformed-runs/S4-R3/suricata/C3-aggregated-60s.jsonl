@@ -1,0 +1,1 @@
+{"window_start_utc":"2026-10-21T20:46:00+00:00","window_seconds":60,"source_logs":["alert","flow","http"],"event_count":15,"methods":{"GET":5},"status_codes":{"401":5},"response_bytes":60,"flow_ports":{"8080":5},"flow_states":{"closed":5},"alert_signatures":{"PP-NSMF auth failure (HTTP 401)":5},"alert_count":5}

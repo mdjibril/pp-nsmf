@@ -1,0 +1,155 @@
+# PP-NSMF experiment scenarios.
+#
+# Each scenario describes the traffic it generates, the generating node, the
+# destination, the expected monitoring events, and the validation checks.
+#
+# Only S2 is fully validated end-to-end at this time; the other scenarios are
+# defined but require additional service setup on the target node before they
+# can be run (noted under "readiness").
+
+scenarios:
+  S1:
+    title: Normal web traffic
+    generator: client
+    destination: server
+    readiness: ready (busybox nc HTTP responder at 10.10.10.20:80 is deployed)
+    description: >
+      Client issues normal HTTP GET requests to a web service on the server.
+    traffic:
+      type: http_get
+      target: http://10.10.10.20:80/
+      requests: 5
+      interval_seconds: 1
+    duration_seconds: 15
+    expected_events:
+      zeek:
+        - http.log requests to 10.10.10.20
+        - conn.log TCP connections to 10.10.10.20:80
+      suricata:
+        - http EVE events (if enabled)
+    validation_checks:
+      - http_requests_present
+      - tcp_conn_80_present
+
+  S2:
+    title: DNS queries and responses
+    generator: client
+    destination: zeek
+    readiness: ready (DNS responder at 10.10.10.40:53 is deployed)
+    description: >
+      Client sends DNS A-record queries for probe.pp-nsmf.test to the DNS
+      responder on the Zeek monitor, which answers 10.10.10.20.
+    traffic:
+      type: dns_query
+      query_name: probe.pp-nsmf.test
+      dns_server: 10.10.10.40
+      queries: 3
+      interval_seconds: 2
+    duration_seconds: 20
+    expected_events:
+      zeek:
+        - dns.log query for probe.pp-nsmf.test
+        - dns.log answer 10.10.10.20
+        - conn.log UDP connection 10.10.10.40:53
+      suricata:
+        - dns EVE event for probe.pp-nsmf.test
+    validation_checks:
+      - dns_query_present
+      - dns_answer_matches_expected
+      - udp_conn_53_present
+
+  S3:
+    title: Controlled port scan
+    generator: attacker
+    destination: server
+    readiness: ready (payload-free TCP connect scan via bash /dev/tcp)
+    description: >
+      Attacker performs a controlled TCP connect scan of a small set of ports
+      on the server.
+    traffic:
+      type: tcp_connect_scan
+      target: 10.10.10.20
+      ports: [21, 22, 80, 443, 8080]
+      timeout_seconds: 1
+      interval_seconds: 0.5
+    duration_seconds: 20
+    expected_events:
+      zeek:
+        - conn.log connection attempts from attacker to server
+      suricata:
+        - flow/scan events (if rules support)
+    validation_checks:
+      - scan_connections_present
+
+  S4:
+    title: Repeated authentication failures
+    generator: attacker
+    destination: server
+    readiness: ready (HTTP Basic auth responder at 10.10.10.20:8080; HTTP-401 alert rule)
+    description: >
+      Attacker makes repeated failed HTTP Basic authentication attempts against
+      a lab-only auth responder on the server.
+    traffic:
+      type: auth_failures
+      target: 10.10.10.20
+      port: 8080
+      username: testuser
+      attempts: 5
+      interval_seconds: 1
+    suricata_rules: /etc/suricata/rules/test-auth-401.rules
+    duration_seconds: 20
+    expected_events:
+      zeek:
+        - http.log requests with status 401 to 10.10.10.20
+        - conn.log TCP connections to 10.10.10.20:8080
+      suricata:
+        - http EVE events (status 401)
+        - alert EVE events from HTTP-401 rule
+    validation_checks:
+      - auth_attempts_present
+      - suricata_alert_present
+
+  S5:
+    title: Periodic beacon-like traffic
+    generator: attacker
+    destination: server
+    readiness: ready (payload-free periodic TCP connect via bash /dev/tcp)
+    description: >
+      Attacker emits periodic beacon-like traffic at a fixed interval, useful
+      for observing periodic connection patterns.
+    traffic:
+      type: periodic_beacon
+      target: 10.10.10.20
+      port: 80
+      interval_seconds: 3
+      count: 4
+    duration_seconds: 25
+    expected_events:
+      zeek:
+        - conn.log periodic connections to 10.10.10.20
+      suricata:
+        - flow events
+    validation_checks:
+      - periodic_connections_present
+
+  S6:
+    title: Synthetic data transfer
+    generator: client
+    destination: server
+    readiness: ready (busybox nc bulk receiver at 10.10.10.20:9999 is deployed)
+    description: >
+      Client transfers a synthetic bulk payload to the server, producing a
+      larger connection with measurable byte counts.
+    traffic:
+      type: bulk_transfer
+      target: 10.10.10.20
+      port: 9999
+      bytes: 65536
+    duration_seconds: 20
+    expected_events:
+      zeek:
+        - conn.log connection with non-zero orig_bytes
+      suricata:
+        - flow events with byte counts
+    validation_checks:
+      - bulk_connection_present

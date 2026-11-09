@@ -1,0 +1,16 @@
+[1917 - Suricata-Main] 2026-10-21 20:18:37 Notice: suricata: This is Suricata version 7.0.3 RELEASE running in SYSTEM mode
+[1917 - Suricata-Main] 2026-10-21 20:18:37 Info: cpu: CPUs/cores online: 4
+[1917 - Suricata-Main] 2026-10-21 20:18:37 Info: suricata: Setting engine mode to IDS mode by default
+[1917 - Suricata-Main] 2026-10-21 20:18:37 Info: exception-policy: master exception-policy set to: auto
+[1917 - Suricata-Main] 2026-10-21 20:18:37 Info: ioctl: eth0: MTU 1500
+[1917 - Suricata-Main] 2026-10-21 20:18:37 Info: logopenfile: fast output device (regular) initialized: fast.log
+[1917 - Suricata-Main] 2026-10-21 20:18:37 Info: logopenfile: eve-log output device (regular) initialized: eve.json
+[1917 - Suricata-Main] 2026-10-21 20:18:37 Info: logopenfile: stats output device (regular) initialized: stats.log
+[1917 - Suricata-Main] 2026-10-21 20:18:37 Info: detect: No signatures supplied.
+[1917 - Suricata-Main] 2026-10-21 20:18:37 Info: runmodes: eth0: creating 4 threads
+[1917 - Suricata-Main] 2026-10-21 20:18:37 Info: unix-manager: unix socket '/var/run/suricata-command.socket'
+[1917 - Suricata-Main] 2026-10-21 20:18:37 Notice: threads: Threads created -> W: 4 FM: 1 FR: 1   Engine started.
+[1917 - Suricata-Main] 2026-10-21 20:18:44 Notice: suricata: Signal Received.  Stopping engine.
+[1917 - Suricata-Main] 2026-10-21 20:18:45 Info: suricata: time elapsed 8.039s
+[1917 - Suricata-Main] 2026-10-21 20:18:46 Info: counters: Alerts: 0
+[1917 - Suricata-Main] 2026-10-21 20:18:46 Notice: device: eth0: packets: 14, drops: 0 (0.00%), invalid chksum: 0

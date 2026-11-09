@@ -1,0 +1,113 @@
+{
+  "scenario": "S3",
+  "repetition": "R2",
+  "validator_version": "1.1.0",
+  "transformation_version": "2.1.0",
+  "hmac_key_id": "e04d6b0475fd",
+  "zeek_scan": {
+    "scan_connections_present": true,
+    "scan_connection_count": 5,
+    "distinct_ports_observed": [
+      "21",
+      "22",
+      "443",
+      "80",
+      "8080"
+    ],
+    "detail": "5 scan connections from 10.10.10.30 to 10.10.10.20"
+  },
+  "suricata": {
+    "suricata_flow_present": true,
+    "suricata_flow_count": 5,
+    "alert_count": 0,
+    "detail": "5 flow events, 0 alert events"
+  },
+  "privacy": {
+    "C1-pseudonymised.jsonl_no_raw_identifiers": true,
+    "C2-minimised-pseudonymised.jsonl_no_raw_identifiers": true,
+    "C3-aggregated-60s.jsonl_no_raw_identifiers": true,
+    "conn.log.C1_no_raw_identifiers": true,
+    "conn.log.C2_no_raw_identifiers": true
+  },
+  "linkability": {
+    "c1": {
+      "status": "ok",
+      "fields": {
+        "dest_ip": {
+          "distinct_raw_values": 1,
+          "distinct_tokens": 1,
+          "consistent": true,
+          "injective": true
+        },
+        "src_ip": {
+          "distinct_raw_values": 1,
+          "distinct_tokens": 1,
+          "consistent": true,
+          "injective": true
+        }
+      },
+      "problems": []
+    },
+    "c2": {
+      "status": "ok",
+      "fields": {
+        "dest_ip": {
+          "distinct_raw_values": 1,
+          "distinct_tokens": 1,
+          "consistent": true,
+          "injective": true
+        },
+        "src_ip": {
+          "distinct_raw_values": 1,
+          "distinct_tokens": 1,
+          "consistent": true,
+          "injective": true
+        }
+      },
+      "problems": []
+    },
+    "c3": {
+      "status": "not_applicable",
+      "reason": "aggregated; identifiers removed by minimisation policy"
+    },
+    "zeek": {
+      "conn.log": {
+        "status": "ok",
+        "fields": {
+          "id.orig_h": {
+            "distinct_raw_values": 1,
+            "distinct_tokens": 1,
+            "consistent": true,
+            "injective": true
+          },
+          "id.resp_h": {
+            "distinct_raw_values": 1,
+            "distinct_tokens": 1,
+            "consistent": true,
+            "injective": true
+          }
+        },
+        "problems": []
+      },
+      "conn.log.C2": {
+        "status": "not_applicable",
+        "reason": "identifier columns dropped by minimisation policy"
+      }
+    },
+    "overall": "ok"
+  },
+  "c3": {
+    "c3_windows_60s": true,
+    "c3_window_count": 1,
+    "detail": "1 windows"
+  },
+  "metrics": {
+    "raw_bytes": 27862,
+    "c1_bytes": 18594,
+    "c2_bytes": 878,
+    "c3_bytes": 194,
+    "c2_reduction_pct": 96.85,
+    "c3_reduction_pct": 99.3
+  },
+  "validation_status": "PASS"
+}

@@ -1,0 +1,25 @@
+PP-NSMF S2-R1 recovery note
+Date: 2026-10-21
+
+Raw Suricata EVE capture preserved at:
+captures/S2/R1-raw-backup/eve.json
+
+Original transformation script and HMAC key were not found on this node.
+A replacement 32-byte HMAC key was generated for this recovery.
+The replacement key is not the original key and must not be treated as equivalent.
+
+Transformation outputs generated:
+C1-pseudonymised.jsonl
+C2-minimised-pseudonymised.jsonl
+C3-aggregated-60s.jsonl
+
+Targeted checks found no raw lab IPs 10.10.10.10, 10.10.10.20,
+10.10.10.30, or 10.10.10.40 in C1. The DNS query name
+probe.pp-nsmf.test was also not found in C1.
+The same tested raw IPs and query name were not found in C2.
+
+The captured DNS events span readiness checks and the later run.
+All observed windows must not be counted as formal experimental
+repetitions without a clean capture boundary and documented timing.
+
+Further nested-field privacy validation remains necessary.

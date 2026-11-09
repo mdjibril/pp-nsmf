@@ -1,0 +1,14 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	http
+#open	2026-10-21-20-37-18
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	trans_depth	method	host	uri	referrer	version	user_agent	origin	request_body_len	response_body_len	status_code	status_msg	info_code	info_msg	tags	username	password	proxied	orig_fuids	orig_filenames	orig_mime_types	resp_fuids	resp_filenames	resp_mime_types
+#types	time	string	addr	port	addr	port	count	string	string	string	string	string	string	string	count	count	count	string	count	string	set[enum]	string	string	set[string]	vector[string]	vector[string]	vector[string]	vector[string]	vector[string]	vector[string]
+1792615038.122745	CqoXC51G1gEEo6qN6e	10.10.10.30	36184	10.10.10.20	8080	1	GET	10.10.10.20:8080	/login	-	1.1	-	-	0	12	401	Unauthorized	-	-	(empty)	testuser	-	-	-	-	-	FNS0jNHF6J4iGWly2	-	text/plain
+1792615039.259399	C9G6PR37xHDmwbCZ8l	10.10.10.30	36200	10.10.10.20	8080	1	GET	10.10.10.20:8080	/login	-	1.1	-	-	0	12	401	Unauthorized	-	-	(empty)	testuser	-	-	-	-	-	Ficpmu1nl4OL6jYlS7	-	text/plain
+1792615040.327474	CMaZ9m3AEiZ3dXKaNh	10.10.10.30	41896	10.10.10.20	8080	1	GET	10.10.10.20:8080	/login	-	1.1	-	-	0	12	401	Unauthorized	-	-	(empty)	testuser	-	-	-	-	-	FkZGHb4UX6jj7ygc15	-	text/plain
+1792615041.426584	COhJ7F3weAy2mwvFzd	10.10.10.30	41906	10.10.10.20	8080	1	GET	10.10.10.20:8080	/login	-	1.1	-	-	0	12	401	Unauthorized	-	-	(empty)	testuser	-	-	-	-	-	FZ7zaV3AYTXtpkPou1	-	text/plain
+1792615042.526872	CDOdwN1GHiFFzXdm6g	10.10.10.30	41916	10.10.10.20	8080	1	GET	10.10.10.20:8080	/login	-	1.1	-	-	0	12	401	Unauthorized	-	-	(empty)	testuser	-	-	-	-	-	FeFQfS3YIpgJg6JJHi	-	text/plain
+#close	2026-10-21-20-37-24

@@ -1,0 +1,26 @@
+{
+  "scenario": "S2",
+  "repetition": "R3",
+  "transformation_version": "2.0.0",
+  "hmac_key_id": "e04d6b0475fd",
+  "window_seconds": 60,
+  "note": "HMAC pseudonyms are linkable pseudonyms, not anonymised data.",
+  "zeek": {
+    "dns.log": {
+      "c1_records": 6,
+      "c2_records": 6
+    },
+    "conn.log": {
+      "c1_records": 4,
+      "c2_records": 4
+    }
+  },
+  "suricata": {
+    "source": "/home/mdjibril/GNS3/projects/PP-NSMF/evidence-backup/raw-runs/S2-R3/suricata/eve.json",
+    "source_events": 18,
+    "dns_events": 12,
+    "c1_records": 18,
+    "c2_records": 12,
+    "c3_windows": 1
+  }
+}

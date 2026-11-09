@@ -1,0 +1,111 @@
+------------------------------------------------------------------------------------
+Date: 10/21/2026 -- 21:06:59 (uptime: 0d, 00h 00m 08s)
+------------------------------------------------------------------------------------
+Counter                                       | TM Name                   | Value
+------------------------------------------------------------------------------------
+capture.kernel_packets                        | Total                     | 13
+capture.afpacket.polls                        | Total                     | 246
+capture.afpacket.poll_timeout                 | Total                     | 235
+capture.afpacket.poll_data                    | Total                     | 11
+decoder.pkts                                  | Total                     | 13
+decoder.bytes                                 | Total                     | 890
+decoder.ipv4                                  | Total                     | 13
+decoder.ethernet                              | Total                     | 13
+decoder.tcp                                   | Total                     | 13
+tcp.syn                                       | Total                     | 2
+tcp.synack                                    | Total                     | 2
+decoder.avg_pkt_size                          | Total                     | 68
+decoder.max_pkt_size                          | Total                     | 74
+tcp.active_sessions                           | Total                     | 2
+flow.total                                    | Total                     | 2
+flow.active                                   | Total                     | 2
+flow.tcp                                      | Total                     | 2
+flow.wrk.spare_sync_avg                       | Total                     | 100
+flow.wrk.spare_sync                           | Total                     | 1
+tcp.sessions                                  | Total                     | 2
+tcp.ssn_from_pool                             | Total                     | 2
+flow.mgr.rows_per_sec                         | Total                     | 6553
+flow.spare                                    | Total                     | 9900
+memcap_pressure                               | Total                     | 5
+memcap_pressure_max                           | Total                     | 5
+tcp.memuse                                    | Total                     | 2424832
+tcp.reassembly_memuse                         | Total                     | 458752
+flow.memuse                                   | Total                     | 7234304
+------------------------------------------------------------------------------------
+Date: 10/21/2026 -- 21:07:07 (uptime: 0d, 00h 00m 16s)
+------------------------------------------------------------------------------------
+Counter                                       | TM Name                   | Value
+------------------------------------------------------------------------------------
+capture.kernel_packets                        | Total                     | 26
+capture.afpacket.polls                        | Total                     | 594
+capture.afpacket.poll_timeout                 | Total                     | 569
+capture.afpacket.poll_data                    | Total                     | 21
+decoder.pkts                                  | Total                     | 26
+decoder.bytes                                 | Total                     | 1780
+decoder.ipv4                                  | Total                     | 26
+decoder.ethernet                              | Total                     | 26
+decoder.tcp                                   | Total                     | 26
+tcp.syn                                       | Total                     | 4
+tcp.synack                                    | Total                     | 4
+decoder.avg_pkt_size                          | Total                     | 68
+decoder.max_pkt_size                          | Total                     | 74
+flow.total                                    | Total                     | 4
+flow.tcp                                      | Total                     | 4
+flow.wrk.spare_sync_avg                       | Total                     | 100
+flow.wrk.spare_sync                           | Total                     | 2
+tcp.sessions                                  | Total                     | 4
+tcp.ssn_from_pool                             | Total                     | 4
+flow.end.state.closed                         | Total                     | 4
+flow.end.tcp_state.closed                     | Total                     | 4
+flow.mgr.full_hash_pass                       | Total                     | 1
+flow.mgr.rows_per_sec                         | Total                     | 6553
+flow.spare                                    | Total                     | 9800
+flow.mgr.rows_maxlen                          | Total                     | 1
+flow.mgr.flows_checked                        | Total                     | 3
+flow.mgr.flows_notimeout                      | Total                     | 3
+memcap_pressure                               | Total                     | 5
+memcap_pressure_max                           | Total                     | 5
+flow.recycler.recycled                        | Total                     | 4
+flow.recycler.queue_max                       | Total                     | 4
+tcp.memuse                                    | Total                     | 2424832
+tcp.reassembly_memuse                         | Total                     | 458752
+flow.memuse                                   | Total                     | 7234304
+------------------------------------------------------------------------------------
+Date: 10/21/2026 -- 21:07:07 (uptime: 0d, 00h 00m 16s)
+------------------------------------------------------------------------------------
+Counter                                       | TM Name                   | Value
+------------------------------------------------------------------------------------
+capture.kernel_packets                        | Total                     | 26
+capture.afpacket.polls                        | Total                     | 594
+capture.afpacket.poll_timeout                 | Total                     | 569
+capture.afpacket.poll_data                    | Total                     | 21
+decoder.pkts                                  | Total                     | 26
+decoder.bytes                                 | Total                     | 1780
+decoder.ipv4                                  | Total                     | 26
+decoder.ethernet                              | Total                     | 26
+decoder.tcp                                   | Total                     | 26
+tcp.syn                                       | Total                     | 4
+tcp.synack                                    | Total                     | 4
+decoder.avg_pkt_size                          | Total                     | 68
+decoder.max_pkt_size                          | Total                     | 74
+flow.total                                    | Total                     | 4
+flow.tcp                                      | Total                     | 4
+flow.wrk.spare_sync_avg                       | Total                     | 100
+flow.wrk.spare_sync                           | Total                     | 2
+tcp.sessions                                  | Total                     | 4
+tcp.ssn_from_pool                             | Total                     | 4
+flow.end.state.closed                         | Total                     | 4
+flow.end.tcp_state.closed                     | Total                     | 4
+flow.mgr.full_hash_pass                       | Total                     | 1
+flow.mgr.rows_per_sec                         | Total                     | 6553
+flow.spare                                    | Total                     | 9800
+flow.mgr.rows_maxlen                          | Total                     | 1
+flow.mgr.flows_checked                        | Total                     | 3
+flow.mgr.flows_notimeout                      | Total                     | 3
+memcap_pressure                               | Total                     | 5
+memcap_pressure_max                           | Total                     | 5
+flow.recycler.recycled                        | Total                     | 4
+flow.recycler.queue_max                       | Total                     | 4
+tcp.memuse                                    | Total                     | 2424832
+tcp.reassembly_memuse                         | Total                     | 458752
+flow.memuse                                   | Total                     | 7234304

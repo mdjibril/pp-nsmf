@@ -1,0 +1,13 @@
+# Secrets: HMAC keys and credentials must never be committed
+**/hmac.key
+**/keys/
+*.key
+*.pem
+
+# Python
+__pycache__/
+*.pyc
+
+# GNS3 runtime artifacts
+project-files/dynamips/
+project-files/docker/*/ubridge.log

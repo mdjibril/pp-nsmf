@@ -1,0 +1,8 @@
+#fields	ts	uid	id.orig_p	id.resp_p	proto	trans_id	rtt	qclass	qclass_name	qtype	qtype_name	rcode	rcode_name	AA	TC	RD	RA	Z	TTLs	rejected	opcode	opcode_name
+#types	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string	string
+1792605260.157265	CHDlic2mqXWiOnlfk	34479	53	udp	25051	0.000074	1	C_INTERNET	1	A	0	NOERROR	F	F	T	T	2	60.000000	F	0	query
+1792605260.157373	CHDlic2mqXWiOnlfk	34479	53	udp	25052	0.000030	1	C_INTERNET	28	AAAA	0	NOERROR	F	F	T	T	2	60.000000	F	0	query
+1792605262.232162	CYd3cJ3Lzu0ZEsqk67	53219	53	udp	34430	0.000072	1	C_INTERNET	1	A	0	NOERROR	F	F	T	T	2	60.000000	F	0	query
+1792605262.232639	CYd3cJ3Lzu0ZEsqk67	53219	53	udp	34431	0.000045	1	C_INTERNET	28	AAAA	0	NOERROR	F	F	T	T	2	60.000000	F	0	query
+1792605264.344725	C1AvSb2z7QDxVRnotf	60973	53	udp	15925	0.000062	1	C_INTERNET	1	A	0	NOERROR	F	F	T	T	2	60.000000	F	0	query
+1792605264.344799	C1AvSb2z7QDxVRnotf	60973	53	udp	15926	0.000046	1	C_INTERNET	28	AAAA	0	NOERROR	F	F	T	T	2	60.000000	F	0	query

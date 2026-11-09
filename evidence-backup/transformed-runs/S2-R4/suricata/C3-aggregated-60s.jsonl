@@ -1,0 +1,1 @@
+{"window_start_utc":"2026-10-21T17:54:00+00:00","window_seconds":60,"source_log":"suricata_dns","event_count":12,"query_types":{"A":3,"AAAA":3},"response_codes":{"NOERROR":6},"dns_message_types":{"query":6,"answer":6},"answer_count":6}

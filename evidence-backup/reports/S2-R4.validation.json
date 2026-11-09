@@ -1,0 +1,141 @@
+{
+  "scenario": "S2",
+  "repetition": "R4",
+  "validator_version": "1.1.0",
+  "transformation_version": "2.0.0",
+  "hmac_key_id": "e04d6b0475fd",
+  "zeek_dns": {
+    "dns_query_present": true,
+    "dns_answer_matches_expected": true,
+    "dns_query_count": 6,
+    "detail": "6 queries, 6 matching answers"
+  },
+  "zeek_conn": {
+    "udp_conn_53_present": true,
+    "udp_53_count": 3,
+    "detail": "3 udp:53 connections"
+  },
+  "suricata": {
+    "suricata_dns_present": true,
+    "suricata_dns_count": 12,
+    "detail": "12 dns events"
+  },
+  "privacy": {
+    "C1-pseudonymised.jsonl_no_raw_identifiers": true,
+    "C2-minimised-pseudonymised.jsonl_no_raw_identifiers": true,
+    "C3-aggregated-60s.jsonl_no_raw_identifiers": true,
+    "dns.log.C1_no_raw_identifiers": true,
+    "dns.log.C2_no_raw_identifiers": true,
+    "conn.log.C1_no_raw_identifiers": true,
+    "conn.log.C2_no_raw_identifiers": true
+  },
+  "linkability": {
+    "c1": {
+      "status": "ok",
+      "fields": {
+        "dest_ip": {
+          "distinct_raw_values": 1,
+          "distinct_tokens": 1,
+          "consistent": true,
+          "injective": true
+        },
+        "dns.rrname": {
+          "distinct_raw_values": 1,
+          "distinct_tokens": 1,
+          "consistent": true,
+          "injective": true
+        },
+        "src_ip": {
+          "distinct_raw_values": 1,
+          "distinct_tokens": 1,
+          "consistent": true,
+          "injective": true
+        }
+      },
+      "problems": []
+    },
+    "c2": {
+      "status": "ok",
+      "fields": {
+        "dest_ip": {
+          "distinct_raw_values": 1,
+          "distinct_tokens": 1,
+          "consistent": true,
+          "injective": true
+        },
+        "src_ip": {
+          "distinct_raw_values": 1,
+          "distinct_tokens": 1,
+          "consistent": true,
+          "injective": true
+        }
+      },
+      "problems": []
+    },
+    "c3": {
+      "status": "not_applicable",
+      "reason": "aggregated; identifiers removed by minimisation policy"
+    },
+    "zeek": {
+      "dns.log": {
+        "status": "ok",
+        "fields": {
+          "id.orig_h": {
+            "distinct_raw_values": 1,
+            "distinct_tokens": 1,
+            "consistent": true,
+            "injective": true
+          },
+          "id.resp_h": {
+            "distinct_raw_values": 1,
+            "distinct_tokens": 1,
+            "consistent": true,
+            "injective": true
+          }
+        },
+        "problems": []
+      },
+      "dns.log.C2": {
+        "status": "not_applicable",
+        "reason": "identifier columns dropped by minimisation policy"
+      },
+      "conn.log": {
+        "status": "ok",
+        "fields": {
+          "id.orig_h": {
+            "distinct_raw_values": 1,
+            "distinct_tokens": 1,
+            "consistent": true,
+            "injective": true
+          },
+          "id.resp_h": {
+            "distinct_raw_values": 1,
+            "distinct_tokens": 1,
+            "consistent": true,
+            "injective": true
+          }
+        },
+        "problems": []
+      },
+      "conn.log.C2": {
+        "status": "not_applicable",
+        "reason": "identifier columns dropped by minimisation policy"
+      }
+    },
+    "overall": "ok"
+  },
+  "c3": {
+    "c3_windows_60s": true,
+    "c3_window_count": 1,
+    "detail": "1 windows"
+  },
+  "metrics": {
+    "raw_bytes": 31720,
+    "c1_bytes": 22276,
+    "c2_bytes": 3144,
+    "c3_bytes": 236,
+    "c2_reduction_pct": 90.09,
+    "c3_reduction_pct": 99.26
+  },
+  "validation_status": "PASS"
+}

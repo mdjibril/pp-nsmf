@@ -1,0 +1,138 @@
+{
+  "scenario": "S4",
+  "repetition": "R1",
+  "validator_version": "1.1.0",
+  "transformation_version": "2.2.0",
+  "hmac_key_id": "e04d6b0475fd",
+  "zeek_auth": {
+    "auth_attempts_present": true,
+    "auth_401_count": 5,
+    "tcp_8080_count": 5,
+    "detail": "5 HTTP 401 responses to 10.10.10.20, 5 tcp:8080 connections"
+  },
+  "suricata": {
+    "suricata_alert_present": true,
+    "suricata_http_present": true,
+    "suricata_http_count": 5,
+    "alert_count": 5,
+    "detail": "5 http events, 5 alert events"
+  },
+  "privacy": {
+    "C1-pseudonymised.jsonl_no_raw_identifiers": true,
+    "C2-minimised-pseudonymised.jsonl_no_raw_identifiers": true,
+    "C3-aggregated-60s.jsonl_no_raw_identifiers": true,
+    "conn.log.C1_no_raw_identifiers": true,
+    "conn.log.C2_no_raw_identifiers": true,
+    "http.log.C1_no_raw_identifiers": true,
+    "http.log.C2_no_raw_identifiers": true
+  },
+  "linkability": {
+    "c1": {
+      "status": "ok",
+      "fields": {
+        "dest_ip": {
+          "distinct_raw_values": 2,
+          "distinct_tokens": 2,
+          "consistent": true,
+          "injective": true
+        },
+        "http.hostname": {
+          "distinct_raw_values": 1,
+          "distinct_tokens": 1,
+          "consistent": true,
+          "injective": true
+        },
+        "src_ip": {
+          "distinct_raw_values": 2,
+          "distinct_tokens": 2,
+          "consistent": true,
+          "injective": true
+        }
+      },
+      "problems": []
+    },
+    "c2": {
+      "status": "ok",
+      "fields": {
+        "dest_ip": {
+          "distinct_raw_values": 2,
+          "distinct_tokens": 2,
+          "consistent": true,
+          "injective": true
+        },
+        "src_ip": {
+          "distinct_raw_values": 2,
+          "distinct_tokens": 2,
+          "consistent": true,
+          "injective": true
+        }
+      },
+      "problems": []
+    },
+    "c3": {
+      "status": "not_applicable",
+      "reason": "aggregated; identifiers removed by minimisation policy"
+    },
+    "zeek": {
+      "conn.log": {
+        "status": "ok",
+        "fields": {
+          "id.orig_h": {
+            "distinct_raw_values": 1,
+            "distinct_tokens": 1,
+            "consistent": true,
+            "injective": true
+          },
+          "id.resp_h": {
+            "distinct_raw_values": 1,
+            "distinct_tokens": 1,
+            "consistent": true,
+            "injective": true
+          }
+        },
+        "problems": []
+      },
+      "conn.log.C2": {
+        "status": "not_applicable",
+        "reason": "identifier columns dropped by minimisation policy"
+      },
+      "http.log": {
+        "status": "ok",
+        "fields": {
+          "id.orig_h": {
+            "distinct_raw_values": 1,
+            "distinct_tokens": 1,
+            "consistent": true,
+            "injective": true
+          },
+          "id.resp_h": {
+            "distinct_raw_values": 1,
+            "distinct_tokens": 1,
+            "consistent": true,
+            "injective": true
+          }
+        },
+        "problems": []
+      },
+      "http.log.C2": {
+        "status": "not_applicable",
+        "reason": "identifier columns dropped by minimisation policy"
+      }
+    },
+    "overall": "ok"
+  },
+  "c3": {
+    "c3_windows_60s": true,
+    "c3_window_count": 1,
+    "detail": "1 windows"
+  },
+  "metrics": {
+    "raw_bytes": 42494,
+    "c1_bytes": 28580,
+    "c2_bytes": 3405,
+    "c3_bytes": 313,
+    "c2_reduction_pct": 91.99,
+    "c3_reduction_pct": 99.26
+  },
+  "validation_status": "PASS"
+}

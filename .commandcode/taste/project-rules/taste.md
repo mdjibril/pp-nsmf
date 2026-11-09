@@ -1,0 +1,31 @@
+# Project Rules
+- Audit the existing project, Docker containers, GNS3 topology, config files, scripts, and evidence before modifying anything. Confidence: 0.85
+- Never delete, overwrite, rename, or silently modify existing experimental evidence, logs, HMAC keys, transformation outputs, or checksum manifests. Confidence: 0.85
+- Request approval and explain impact before disruptive or destructive changes (e.g. docker rm, docker system prune). Confidence: 0.85
+- Verify command results and capture output; do not assume a command succeeded. Confidence: 0.85
+- Never fabricate experimental results, event counts, timestamps, detection metrics, or successful validation. Confidence: 0.85
+- Use Python's standard library where practical and avoid unnecessary dependencies. Confidence: 0.80
+- Keep credentials and HMAC keys out of source control and logs, preserving appropriate file permissions. Confidence: 0.80
+- Mark a run failed or incomplete when a required check fails; do not silently retry and count it as successful. Confidence: 0.80
+- Give each experiment repetition a distinct run identifier with clean capture boundaries and a unique output directory. Confidence: 0.70
+- Distinguish runs that used different HMAC keys or transformation versions when summarizing results. Confidence: 0.70
+- Prefer a version-controlled startup script for new services rather than manual, temporary configuration. Confidence: 0.70
+- Inspect actual log/event structures (e.g. Zeek http.log columns, Suricata eve.json fields) with a throwaway exploratory capture before writing transform or validation code. Confidence: 0.60
+- Generate synthetic traffic payloads using deterministic, non-sensitive bytes only (no real user data or secrets), and verify transferred content is synthetic. Confidence: 0.70
+- Do not conflate distinct outcome dimensions: telemetry-volume reduction, identifier exposure, pseudonym linkability, aggregation, investigation utility, and detection effectiveness are separate and must not be treated as interchangeable. Confidence: 0.85
+- Use careful terminology: describe HMAC pseudonymisation as "linkable pseudonyms" (not "anonymisation"), and describe rule firing as a rule-loading/firing check (not general detection effectiveness). Confidence: 0.85
+- Do not claim detection effectiveness unless a defined detector and labelled ground truth actually support that claim. Confidence: 0.85
+- Reduce percentages must use a matched source scope: numerator and denominator must reference the same telemetry source (e.g. Suricata-only or Zeek-only), never mixing source-only transformed bytes against combined-raw baselines. Confidence: 0.85
+- Keep byte-volume vs record-count vs field reduction metrics distinct and non-interchangeable; do not call byte-volume reduction a privacy-risk reduction. Confidence: 0.80
+- Never silently treat missing/empty files as zero bytes or zero records; mark metrics undefined or unavailable and document the limitation instead of assuming zero. Confidence: 0.80
+- Mark reduction percentage as undefined (not zero) when the baseline byte/record count is zero to avoid divide-by-zero. Confidence: 0.75
+- Trace every derived metric back to its exact source files and byte/record-counting convention before relying on it in a manuscript. Confidence: 0.70
+- Emit versioned result CSVs/reports for corrected metrics rather than silently overwriting historical analysis; retain and label prior values as recalculated. Confidence: 0.70
+- Report scenario means alongside run count and per-run spread (range or standard deviation), plus raw/transformed byte totals or means, so readers can assess stability and audit comparisons rather than relying on means alone. Confidence: 0.70
+- After creating or editing a documentation/result file, record its checksum into the artifacts manifest (docs/metric-scope-artifacts.sha256) rather than leaving the manifest stale. Confidence: 0.60
+- Keep the original manuscript (PP-NSMF_NDPC_manuscript.docx) untouched; edit only the working draft copy in docs/manuscript-revision/ and verify the original's checksum is unchanged. Confidence: 0.70
+- Log every manuscript edit in docs/manuscript-revision/CHANGELOG.md with before/after text, rationale, and evidence basis. Confidence: 0.70
+- When editing DOCX files, replace unique verbatim strings in word/document.xml and assert exact occurrence count before replacing; never rewrite the whole document. Confidence: 0.65
+- Treat Literature Review claims 3.4/3.6/3.9 and FN4/FN5 DOI corrections as pending user web verification; do not modify them without confirmation. Confidence: 0.70
+- Verify DOCX integrity after edits (zip testzip, XML well-formedness, paragraph/footnote counts) and re-confirm word-count limits (abstract 250-300, main text 3500-4000). Confidence: 0.65
+- Avoid rewriting text that already meets the style checklist; make only genuine, evidence-backed fixes rather than changes for volume. Confidence: 0.70

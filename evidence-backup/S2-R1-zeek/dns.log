@@ -1,0 +1,11 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	dns
+#open	2026-10-21-00-39-39
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	trans_id	rtt	query	qclass	qclass_name	qtype	qtype_name	rcode	rcode_name	AA	TC	RD	RA	Z	answers	TTLs	rejected	opcode	opcode_name
+#types	time	string	addr	port	addr	port	enum	count	interval	string	count	string	count	string	count	string	bool	bool	bool	bool	count	vector[string]	vector[interval]	bool	count	string
+1792543179.758813	ChjKN81DZUgBPFP3m9	10.10.10.10	44183	10.10.10.40	53	udp	697	0.000311	probe.pp-nsmf.test	1	C_INTERNET	1	A	0	NOERROR	F	F	T	T	0	10.10.10.20	60.000000	F	0	query
+1792543271.745066	C9IgxCYfAsDp3WI7g	10.10.10.10	55160	10.10.10.40	53	udp	41621	0.000159	probe.pp-nsmf.test	1	C_INTERNET	1	A	0	NOERROR	F	F	T	T	0	10.10.10.20	60.000000	F	0	query
+#close	2026-10-21-00-41-56

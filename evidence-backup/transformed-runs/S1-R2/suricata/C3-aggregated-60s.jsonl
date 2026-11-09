@@ -1,0 +1,1 @@
+{"window_start_utc":"2026-10-21T19:35:00+00:00","window_seconds":60,"source_log":"suricata_http","event_count":5,"methods":{"GET":5},"status_codes":{"200":5},"response_bytes":680}

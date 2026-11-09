@@ -1,0 +1,13 @@
+{
+  "scenario": "S2",
+  "repetition": "R1",
+  "source": "/var/log/suricata/pp-nsmf/captures/S2/R1-raw-backup/eve.json",
+  "source_events": 275,
+  "dns_events": 8,
+  "c1_records": 275,
+  "c2_dns_records": 8,
+  "c3_windows": 4,
+  "window_seconds": 60,
+  "hmac_key_status": "replacement key generated during recovery",
+  "note": "Original key was unavailable. This replacement key is not the previously generated key; record this change in the experiment log. C0 remains the raw backup."
+}

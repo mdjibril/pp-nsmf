@@ -1,0 +1,172 @@
+{
+  "scenario": "S1",
+  "repetition": "R4",
+  "status": "PASS",
+  "validation": {
+    "scenario": "S1",
+    "repetition": "R4",
+    "validator_version": "1.1.0",
+    "transformation_version": "2.0.0",
+    "hmac_key_id": "e04d6b0475fd",
+    "zeek_http": {
+      "http_requests_present": true,
+      "http_request_count": 5,
+      "detail": "5 GET requests to 10.10.10.20"
+    },
+    "zeek_conn": {
+      "tcp_conn_80_present": true,
+      "tcp_80_count": 5,
+      "detail": "5 tcp:80 connections"
+    },
+    "suricata": {
+      "suricata_http_present": true,
+      "suricata_http_count": 5,
+      "detail": "5 http events"
+    },
+    "privacy": {
+      "C1-pseudonymised.jsonl_no_raw_identifiers": true,
+      "C2-minimised-pseudonymised.jsonl_no_raw_identifiers": true,
+      "C3-aggregated-60s.jsonl_no_raw_identifiers": true,
+      "conn.log.C1_no_raw_identifiers": true,
+      "conn.log.C2_no_raw_identifiers": true,
+      "http.log.C1_no_raw_identifiers": true,
+      "http.log.C2_no_raw_identifiers": true
+    },
+    "linkability": {
+      "c1": {
+        "status": "ok",
+        "fields": {
+          "dest_ip": {
+            "distinct_raw_values": 2,
+            "distinct_tokens": 2,
+            "consistent": true,
+            "injective": true
+          },
+          "http.hostname": {
+            "distinct_raw_values": 1,
+            "distinct_tokens": 1,
+            "consistent": true,
+            "injective": true
+          },
+          "src_ip": {
+            "distinct_raw_values": 2,
+            "distinct_tokens": 2,
+            "consistent": true,
+            "injective": true
+          }
+        },
+        "problems": []
+      },
+      "c2": {
+        "status": "ok",
+        "fields": {
+          "dest_ip": {
+            "distinct_raw_values": 1,
+            "distinct_tokens": 1,
+            "consistent": true,
+            "injective": true
+          },
+          "src_ip": {
+            "distinct_raw_values": 1,
+            "distinct_tokens": 1,
+            "consistent": true,
+            "injective": true
+          }
+        },
+        "problems": []
+      },
+      "c3": {
+        "status": "not_applicable",
+        "reason": "aggregated; identifiers removed by minimisation policy"
+      },
+      "zeek": {
+        "conn.log": {
+          "status": "ok",
+          "fields": {
+            "id.orig_h": {
+              "distinct_raw_values": 1,
+              "distinct_tokens": 1,
+              "consistent": true,
+              "injective": true
+            },
+            "id.resp_h": {
+              "distinct_raw_values": 1,
+              "distinct_tokens": 1,
+              "consistent": true,
+              "injective": true
+            }
+          },
+          "problems": []
+        },
+        "conn.log.C2": {
+          "status": "not_applicable",
+          "reason": "identifier columns dropped by minimisation policy"
+        },
+        "http.log": {
+          "status": "ok",
+          "fields": {
+            "id.orig_h": {
+              "distinct_raw_values": 1,
+              "distinct_tokens": 1,
+              "consistent": true,
+              "injective": true
+            },
+            "id.resp_h": {
+              "distinct_raw_values": 1,
+              "distinct_tokens": 1,
+              "consistent": true,
+              "injective": true
+            }
+          },
+          "problems": []
+        },
+        "http.log.C2": {
+          "status": "not_applicable",
+          "reason": "identifier columns dropped by minimisation policy"
+        }
+      },
+      "overall": "ok"
+    },
+    "c3": {
+      "c3_windows_60s": true,
+      "c3_window_count": 1,
+      "detail": "1 windows"
+    },
+    "metrics": {
+      "raw_bytes": 36558,
+      "c1_bytes": 23891,
+      "c2_bytes": 1065,
+      "c3_bytes": 180,
+      "c2_reduction_pct": 97.09,
+      "c3_reduction_pct": 99.51
+    },
+    "validation_status": "PASS"
+  },
+  "metadata": {
+    "scenario": "S1",
+    "repetition": "R4",
+    "transformation_version": "2.0.0",
+    "hmac_key_id": "e04d6b0475fd",
+    "window_seconds": 60,
+    "note": "HMAC pseudonyms are linkable pseudonyms, not anonymised data.",
+    "zeek": {
+      "conn.log": {
+        "c1_records": 5,
+        "c2_records": 5
+      },
+      "http.log": {
+        "c1_records": 5,
+        "c2_records": 5
+      }
+    },
+    "suricata": {
+      "source": "/home/mdjibril/GNS3/projects/PP-NSMF/evidence-backup/raw-runs/S1-R4/suricata/eve.json",
+      "source_events": 17,
+      "dns_events": 0,
+      "http_events": 5,
+      "c1_records": 17,
+      "c2_records": 5,
+      "c3_windows": 1
+    }
+  }
+}
